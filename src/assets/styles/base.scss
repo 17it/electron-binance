@@ -1,0 +1,532 @@
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.pb16 {
+  padding-bottom: 16px;
+}
+
+/* -- 满屏白色底,如404页 -- */
+.gyl-full-screen {
+  min-height: calc(100vh - #{$navHeight} - 100px);
+  background: rgba(255, 255, 255, 1);
+  border-radius: 4px;
+}
+
+/* -- 最上面页面级别的切换 -- */
+.gyl-toggle {
+  margin-bottom: 10px;
+}
+
+/* -- 页面大title -- */
+.gyl-title {
+  margin-bottom: 16px;
+  color: #000;
+  font-weight: 600;
+  font-size: 16px;
+
+  i.el-icon-s-order {
+    margin-right: 8px;
+    @include font_color('main-color');
+  }
+}
+
+/* -- 次标题 -- */
+.gyl-sub-tit {
+  height: 16px;
+  margin-bottom: 16px;
+  color: rgba(0, 0, 0, 1);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+/* -- 公用模板外包 -- */
+.gyl-view {
+  position: relative;
+  margin-bottom: 10px;
+  padding: 16px 20px;
+  background: #fff;
+  border-radius: 4px;
+}
+
+/* -- 页面表单查询 -- */
+.gyl-form-view {
+  position: relative;
+  margin-bottom: 10px;
+  padding: 16px 20px 0;
+  background: #fff;
+  border-radius: 4px;
+
+  .form-switch {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 1;
+    width: 106px;
+    height: 22px;
+    color: #666;
+    line-height: 22px;
+    text-align: center;
+    background: rgba(239, 239, 239, 1);
+    transform: translateX(-50%);
+    cursor: pointer;
+    clip-path: polygon(10px 0%, 96px 0, 100% 100%, 0% 100%);
+
+    &:hover {
+      @include background_color('menu-hover-color');
+      @include font_color('menu-active-color');
+    }
+  }
+}
+
+.gyl-form-grid {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  column-gap: 10px;
+}
+
+.gyl-form-flex {
+  display: flex;
+  flex-wrap: wrap;
+
+  .el-form-item {
+    width: 33.3333%;
+  }
+
+  .gyl-form-btn-wrap {
+    margin-left: auto;
+  }
+}
+
+[class*=' gyl-form'],
+[class^='gyl-form'] {
+  .el-input,
+  .el-select,
+  .el-cascader,
+  .el-date-editor.el-input,
+  .el-date-editor.el-input__inner {
+    width: 100%;
+  }
+}
+
+/* -- form表单底部按钮 -- */
+.gyl-form-btn-wrap {
+  flex: 1;
+  text-align: right;
+
+  .el-form-item__content {
+    display: inline-block;
+    min-width: 150px;
+    margin-left: 10px !important;
+  }
+
+  .el-button {
+    letter-spacing: 2px;
+  }
+}
+
+/* -- form折叠按钮 -- */
+.gyl-collapse-btn {
+  display: inline-block;
+  margin-left: 10px;
+  @include font_color('main-color');
+
+  cursor: pointer;
+}
+
+/**
+  * 页面公用gyl-table-view查询列表
+  * 复杂gyl-table-expand：table折叠面板
+  * @gyl-table-: 以gyl-table- 开头的类名
+  * 添加border,同时隐藏边框线,目的table可自我调节
+ */
+.gyl-table-view {
+  position: relative;
+  margin-top: 10px;
+  padding: 16px 20px;
+  background: #fff;
+  border-radius: 4px;
+}
+
+/* -- table折叠 -- */
+.gyl-table-expand {
+  &.el-table {
+    .el-table__expanded-cell[class*='cell'] {
+      padding: 0 20px;
+      background-color: #f1f4f9;
+
+      &:hover {
+        background-color: #f1f4f9 !important;
+      }
+    }
+
+    .el-table__expand-column {
+      display: none;
+    }
+
+    td {
+      vertical-align: top;
+    }
+
+    .sub-text {
+      color: #999;
+    }
+  }
+}
+
+/* -- table添加border -- */
+[class*=' gyl-table'],
+[class^='gyl-table'] {
+  .table-tools {
+    padding-bottom: 10px;
+  }
+
+  .table-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    background: #fff;
+
+    img {
+      width: 317px;
+      height: 201px;
+    }
+
+    .text {
+      padding-top: 10px;
+      color: #707784;
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+
+  .el-table--border {
+    &:not(.el-table--group) {
+      border: 0;
+
+      &::after {
+        width: 0;
+      }
+
+      th,
+      td {
+        border-right: 0;
+      }
+
+      th > .cell {
+        // padding: 0 15px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        &::before {
+          position: absolute;
+          top: 4px;
+          bottom: 4px;
+          left: -1px;
+          width: 1px;
+          border-right: 2px #ccc dotted;
+          content: '';
+        }
+      }
+
+      th:first-child > .cell {
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+/* -- page页码 -- */
+.gyl-pagination {
+  padding-top: 10px;
+  text-align: right;
+}
+
+/* -- 页面tag标签 -- */
+.gyl-tag {
+  display: inline-block;
+  height: 20px;
+  margin: 0 4px;
+  padding: 0 14px;
+  font-size: 12px;
+  line-height: 20px;
+  border-radius: 2px;
+
+  &.main {
+    @include font_color('menu-active-color');
+    @include background_color('menu-hover-color');
+  }
+
+  &.round {
+    border-radius: 10px;
+  }
+
+  &.info {
+    @include utils-type(#3c6ef0);
+  }
+
+  &.warning {
+    @include utils-type(#fc8900);
+  }
+
+  &.success {
+    @include utils-type(#4cc19a);
+  }
+
+  &.danger {
+    @include utils-type(#e1251b);
+  }
+}
+
+/* -- 强调加* -- */
+.gyl-label {
+  color: #333;
+  line-height: 32px;
+
+  &::before {
+    display: inline-block;
+    margin-right: 4px;
+    color: #e1251b;
+    content: '*';
+  }
+}
+
+/* -- 帮助提示 -- */
+.gyl-help {
+  display: inline-block;
+  line-height: 32px;
+  cursor: pointer;
+
+  &:hover {
+    color: #3c6ef0;
+  }
+}
+
+/* -- card卡片(收起/展开，更多) -- */
+.gyl-entry-card {
+  .el-card__header {
+    padding: 13px 20px;
+
+    .title {
+      font: 700 16px/1 sans-serif;
+
+      i {
+        @include font_color('main-color');
+      }
+    }
+
+    .btn-expand {
+      padding-top: 3px;
+    }
+  }
+
+  &.collapse {
+    .el-card__body {
+      display: none;
+    }
+  }
+}
+
+/* -- 通用详情样式 -- */
+.gyl-detail-tit {
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 24px;
+
+  .icon {
+    margin-top: 5px;
+    font-size: 16px;
+    vertical-align: top;
+    @include font_color('main-color');
+  }
+}
+
+.gyl-mock-form {
+  margin-bottom: 4px;
+  @include utils-clearfix;
+
+  .el-form-item__label,
+  .el-form-item__content {
+    line-height: 24px;
+  }
+
+  .tip-icon {
+    display: inline-block;
+    height: 20px;
+    margin: 2px 0 0 4px;
+    padding: 0 8px;
+    font-size: 12px;
+    line-height: 20px;
+    vertical-align: top;
+    border-radius: 10px 10px 10px 0;
+    @include utils-type(#3c6ef0);
+
+    &.warning {
+      @include utils-type(#fc8900);
+    }
+
+    &.success {
+      @include utils-type(#4cc19a);
+    }
+
+    &.danger {
+      @include utils-type(#e1251b);
+    }
+  }
+}
+
+.gyl-mock-table {
+  border-bottom: 1px solid rgba(199, 199, 199, 1);
+  border-radius: 4px;
+
+  & + .gyl-mock-table {
+    margin-top: 10px;
+  }
+
+  &-wrap {
+    margin-bottom: 20px;
+  }
+
+  .tit {
+    height: 36px;
+    margin-bottom: 16px;
+    padding: 0 16px;
+    color: #333;
+    line-height: 36px;
+    background: rgba(244, 244, 244, 1);
+    border-radius: 4px 4px 0 0;
+
+    span {
+      padding: 0 8px 0 16px;
+      color: #666;
+    }
+  }
+}
+
+.gyl-edit-card {
+  margin-bottom: 20px;
+  border: 1px solid rgba(229, 229, 229, 1);
+  border-radius: 4px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  h5 {
+    height: 46px;
+    padding: 15px;
+    font-weight: 600;
+    line-height: 16px;
+    background: rgba(247, 247, 247, 1);
+    border-radius: 4px 4px 0 0;
+  }
+
+  .card-content {
+    padding: 20px 10px 10px;
+  }
+}
+
+/* -- 侧边展开Drawer详情 -- */
+.gyl-detail-drawer {
+  &.el-drawer {
+    overflow: visible;
+
+    .gyl-hamburger {
+      position: absolute;
+      top: 9px;
+      left: -12px;
+      width: 12px;
+      height: 42px;
+      color: #fff;
+      font-size: 8px;
+      line-height: 42px;
+      text-align: center;
+      border-radius: 12px 0 0 12px;
+      cursor: pointer;
+      @include background_color('main-color');
+    }
+
+    .drawer-content {
+      height: 100vh;
+      padding: 12px 16px;
+      overflow-x: auto;
+      overflow-y: scroll;
+    }
+  }
+}
+
+/*
+*  messageBox
+*/
+.gyl-messageBox-twin-row {
+  &.el-message-box {
+    .el-message-box__status {
+      top: 24%;
+    }
+
+    .el-message-box__message {
+      h5 {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.gyl-messageBox-center {
+  width: 500px !important;
+
+  &.el-message-box {
+    .el-message-box__message {
+      text-align: center;
+
+      h5 {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+/* -- 页面底部固定按钮组出现，页面最外层给的margin值 -- */
+.gyl-with-footer {
+  margin-bottom: 50px;
+}
+
+/* 页面公用底部 */
+.gyl-footer-bar {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 70;
+  padding: 12px 20px 12px 220px;
+  overflow: hidden;
+  color: #666;
+  font-size: 14px;
+  background: #fff;
+
+  .el-button {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+/* 侧边栏隐藏，底部footerBar的左边距跟着变化 */
+.hideSidebar {
+  .gyl-footer-bar {
+    padding-left: 84px;
+  }
+}

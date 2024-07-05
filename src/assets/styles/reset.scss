@@ -1,0 +1,163 @@
+@charset "utf-8";
+
+/* -- 全局reset
+------------------------------------------- */
+
+html,
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+object,
+code,
+legend,
+button,
+input,
+textarea,
+label,
+th,
+td,
+a,
+img {
+  // -webkit-box-sizing: border-box;
+  // box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  word-wrap: break-word;
+  border: 0;
+  outline: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased; /* 抗锯齿 */ //隐藏navbar的时候windows滚动条bug
+}
+
+/* 设置默认字体 */
+:focus {
+  outline: 0;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+/* 重置列表 */
+fieldset,
+img {
+  vertical-align: top;
+  border: 0 none;
+}
+
+/* 重置图片元素 */
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+i,
+th,
+var,
+optgroup {
+  font-weight: normal;
+  font-style: normal;
+}
+
+abbr,
+acronym {
+  font-variant: normal;
+  border: 0;
+}
+
+code,
+kbd,
+samp,
+tt {
+  font-size: 100%;
+}
+
+textarea {
+  resize: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 重置表格 */
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: '';
+  content: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 去掉搜索框的自带样式，包括边框，搜索和删除按钮 */
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+  display: none;
+}
+
+svg,
+img {
+  display: inline !important;
+  vertical-align: middle;
+}

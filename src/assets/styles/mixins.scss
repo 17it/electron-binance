@@ -1,0 +1,74 @@
+@import './themes.scss';
+@mixin themify($themes: $themes) {
+  @each $theme-name, $map in $themes {
+    .theme-#{$theme-name} & {
+
+      $theme-map:() !global;
+
+      @each $key, $value in $map {
+        $theme-map: map-merge($theme-map, ($key: $value)) !global;
+      }
+
+      @content;
+
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
+
+//获取背景颜色
+// @include background_color("main-color");
+@mixin background_color($color) {
+  @include themify {
+      background-color: themed($color)!important;
+  }
+}
+
+//获取字体颜色
+// @include font_color("main-color");
+@mixin font_color($color) {
+  @include themify {
+    color: themed($color)!important;
+  }
+}
+
+// @include nav_height("nav-height");
+@mixin nav_height($key) {
+  @include themify {
+    height: themed($key);
+  }
+}
+
+//获取边框颜色
+// @include border_color("main-color");
+@mixin border_color($color) {
+  @include themify {
+      border-color: themed($color)!important;
+  }
+}
+
+//不同类型颜色
+@mixin utils-type($color){
+  color:$color;
+  background: rgba($color, .1);
+}
+
+//清除浮动
+@mixin utils-clearfix {
+  $selector: &;
+
+  @at-root {
+    #{$selector}::before,
+    #{$selector}::after {
+      display: table;
+      content: "";
+    }
+    #{$selector}::after {
+      clear: both
+    }
+  }
+}

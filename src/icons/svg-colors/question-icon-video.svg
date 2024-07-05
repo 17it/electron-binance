@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="21px" viewBox="0 0 20 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>视频</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="99.4673295%" id="linearGradient-1">
+            <stop stop-color="#7D96FF" offset="0%"></stop>
+            <stop stop-color="#6F87FF" offset="100%"></stop>
+        </linearGradient>
+        <path d="M8.9912996,4.72726401 L6.62609468,2 L3.9478302,2 L6.31305142,4.72726401 L8.9912996,4.72726401 Z M15.947822,4.72726401 L13.5826008,2 L10.9043526,2 L13.2695576,4.72726401 L15.947822,4.72726401 Z M12.469569,4.72726401 L10.1043478,2 L7.42608327,2 L9.79130449,4.72726401 L12.469569,4.72726401 Z M16.9565224,2 L14.3826057,2 L16.7478269,4.72726401 L18,4.72726401 L18,3.022728 C18,2.44317681 17.5478155,2 16.9565224,2 Z M3.14782531,2 L3.04347755,2 C2.45218448,2 2,2.44317681 2,3.022728 L2,4.72726401 L5.51304653,4.72726401 L3.14782531,2 L3.14782531,2 Z M2,15.977272 C2,16.5568232 2.45218448,17 3.04347755,17 L16.9565224,17 C17.5478155,17 18,16.5568232 18,15.977272 L18,5.409088 L2,5.409088 L2,15.977272 Z" id="path-2"></path>
+        <filter x="-6.2%" y="-6.7%" width="125.0%" height="126.7%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="1" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.278431373   0 0 0 0 0.316433566   0 0 0 0 1  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="97.5579108%" id="linearGradient-4">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#CFD3FF" offset="100%"></stop>
+        </linearGradient>
+        <path d="M7.56522448,8.477272 C7.56522448,7.89772081 8.0521698,7.625004 8.60870203,7.625004 C8.78260409,7.625004 8.9912996,7.6590896 9.16521796,7.7613624 L13.1304327,10.011364 C13.8260898,10.3863696 13.8260898,11.3409104 13.1304327,11.715916 L9.16521796,13.9659176 C8.9912996,14.0681904 8.81739754,14.102276 8.60870203,14.102276 C8.0521698,14.102276 7.56522448,13.8295432 7.56522448,13.250008 L7.56522448,8.477272 Z" id="path-5"></path>
+        <filter x="-98.6%" y="-77.2%" width="330.0%" height="316.1%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="1" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.254901961   0 0 0 0 0.533333333   0 0 0 0 0.996078431  0 0 0 0.6 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="20220402确定版本" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="42试卷详情" transform="translate(-1022.000000, -1310.000000)" fill-rule="nonzero">
+            <g id="编组-9" transform="translate(240.000000, 303.000000)">
+                <g id="main" transform="translate(188.000000, 88.000000)">
+                    <g id="编组-8备份-3" transform="translate(0.000000, 903.000000)">
+                        <g id="编组-7" transform="translate(579.000000, 8.000000)">
+                            <g id="编组-6" transform="translate(15.000000, 7.000000)">
+                                <g id="视频" transform="translate(0.000000, 1.000000)">
+                                    <rect id="矩形" fill="#000000" opacity="0" x="0" y="0" width="20" height="20"></rect>
+                                    <g id="形状">
+                                        <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                                        <use fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                                    </g>
+                                    <g id="路径">
+                                        <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                                        <use fill="url(#linearGradient-4)" xlink:href="#path-5"></use>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

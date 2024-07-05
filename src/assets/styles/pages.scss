@@ -1,0 +1,65 @@
+.one-line-dot {
+  display: block;
+  width: 100%;
+  margin-right: 3px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.select-class {
+  max-width: 200px;
+}
+
+.link-class {
+  color: $mainColorBlue;
+
+  &:link {
+    color: $mainColorBlue;
+  }
+
+  &:visited {
+    color: $mainColorBlue;
+  }
+
+  &:hover {
+    color: rgba($mainColorBlue, 0.8);
+  }
+
+  &:active {
+    color: $mainColorBlue;
+  }
+}
+
+.delete-class {
+  color: $deleteColor;
+
+  &:link {
+    color: $deleteColor;
+  }
+
+  &:visited {
+    color: $deleteColor;
+  }
+
+  &:hover {
+    color: rgba($deleteColor, 0.8);
+  }
+
+  &:active {
+    color: $deleteColor;
+  }
+}
+
+.required-class {
+  &::before {
+    color: $deleteColor;
+    content: '*';
+  }
+}
+
+.descriptionLabelClass {
+  justify-content: right;
+  width: 120px;
+  margin-bottom: 24px;
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="21px" viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>问答</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="99.4673295%" id="linearGradient-1">
+            <stop stop-color="#5ADFAC" offset="0%"></stop>
+            <stop stop-color="#30C484" offset="100%"></stop>
+        </linearGradient>
+        <path d="M10,1.30859375 C14.8001367,1.30859375 18.6914062,5.19986328 18.6914062,10 C18.6914062,14.8001367 14.8001367,18.6914062 10,18.6914062 C8.69464844,18.6914062 7.43017578,18.4028906 6.27917969,17.8568164 C6.23367188,17.8352148 6.173125,17.8053906 6.0975,17.7673242 C6.02238919,17.7295157 5.93521062,17.7235733 5.85566406,17.7508398 L4.11265625,18.3483594 C3.48111328,18.5648633 2.71345703,18.6914062 2.44667367,18.4855436 C2.29563824,18.3689975 2.4969125,17.2231202 2.52394531,17.0339062 L2.81033203,15.0289258 C2.82122216,14.9526572 2.80355499,14.8750538 2.76072266,14.8110156 C2.74483166,14.7872972 2.7290762,14.7634882 2.71345703,14.7395898 C1.80320313,13.3432031 1.30859375,11.7082227 1.30859375,10 C1.30859375,5.19986328 5.19986328,1.30859375 10,1.30859375 Z" id="path-2"></path>
+        <filter x="-5.8%" y="-5.8%" width="123.0%" height="123.0%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="1" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.278431373   0 0 0 0 1   0 0 0 0 0.522686137  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="14.9554817%" y1="31.4847544%" x2="82.082209%" y2="72.4004218%" id="linearGradient-4">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#BEF5D4" offset="100%"></stop>
+        </linearGradient>
+        <path d="M8.1375,11.1095307 C8.30318542,11.1095307 8.4375,11.2438453 8.4375,11.4095307 L8.4375,11.4095307 L8.4375,12.3209036 C8.4375,12.4865891 8.30318542,12.6209036 8.1375,12.6209036 L8.1375,12.6209036 L6.01875,12.6209036 C5.85306458,12.6209036 5.71875,12.4865891 5.71875,12.3209036 L5.71875,12.3209036 L5.71875,11.4095307 C5.71875,11.2438453 5.85306458,11.1095307 6.01875,11.1095307 L6.01875,11.1095307 Z M13.85625,7.48645845 C14.0219354,7.48645845 14.15625,7.62077302 14.15625,7.78645845 L14.15625,7.78645845 L14.15625,8.86015625 C14.15625,9.02584167 14.0219354,9.16015625 13.85625,9.16015625 L13.85625,9.16015625 L6.01875,9.16015625 C5.85306458,9.16015625 5.71875,9.02584167 5.71875,8.86015625 L5.71875,8.86015625 L5.71875,7.78645845 C5.71875,7.62077302 5.85306458,7.48645845 6.01875,7.48645845 L6.01875,7.48645845 Z" id="path-5"></path>
+        <filter x="-65.2%" y="-107.1%" width="254.1%" height="353.2%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="1" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.0956897163   0 0 0 0 0.775447237   0 0 0 0 0.486783085  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="20220402确定版本" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="42试卷详情" transform="translate(-1050.000000, -1088.000000)" fill-rule="nonzero">
+            <g id="编组-9" transform="translate(240.000000, 303.000000)">
+                <g id="main" transform="translate(188.000000, 88.000000)">
+                    <g id="编组-8备份-2" transform="translate(0.000000, 682.000000)">
+                        <g id="编组-7" transform="translate(607.000000, 8.000000)">
+                            <g id="问答" transform="translate(15.000000, 7.000000)">
+                                <rect id="矩形" fill="#000000" opacity="0" x="0" y="0" width="20" height="20"></rect>
+                                <g id="形状">
+                                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                                    <use fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                                </g>
+                                <g id="形状结合">
+                                    <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                                    <use fill="url(#linearGradient-4)" xlink:href="#path-5"></use>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,114 @@
+cache:
+  untracked: true
+  key: "$CI_BUILD_REF_NAME"
+  paths:
+    - node_modules/
+
+stages:
+  - dev
+  - test
+  - pre
+  - prod
+
+dev_stage:
+  stage: dev
+  script:
+    - node -v
+    - npm -v
+    - npm install --unsafe-perm # 增加--unsafe-perm参数是因为node-sass安装会有权限问题
+    - npm run build:dev
+    - scp -r dist root@172.16.233.190:/opt/www_admin_base/dev/
+  only:
+    - develop
+  tags:
+    - runner-dev
+
+test_stage:
+  stage: test
+  script:
+    - node -v
+    - npm -v
+    - npm install --unsafe-perm # 增加--unsafe-perm参数是因为node-sass安装会有权限问题
+    - npm run build:test
+    - scp -r dist root@172.16.233.190:/opt/www_admin_base/test/
+  only:
+    - test
+  tags:
+    - runner-test
+
+pre_stage:
+  stage: pre
+  script:
+    - node -v
+    - npm -v
+    - npm install --unsafe-perm # 增加--unsafe-perm参数是因为node-sass安装会有权限问题
+    - npm run build:pre
+    - scp -r dist root@10.0.1.158:/opt/www_admin_base/pre/
+  only:
+    - pre
+  tags:
+    - runner-pre
+
+prod_stage:
+  stage: prod
+  script:
+    - node -v
+    - npm -v
+    - npm install --unsafe-perm # 增加--unsafe-perm参数是因为node-sass安装会有权限问题
+    - npm run build:prod
+    - scp -r dist root@60.205.182.228:/opt/www_admin_base/prod/
+  only:
+    - master
+  tags:
+    - runner-prod
+
+# 消息通知配置,用来在飞书查看构建状态和构建地址,方便查看管理
+# 任务执行后会执行下方脚本
+after_script:
+  - COMMITTER_NAME=$(git --no-pager show -s --format='%an' $CI_COMMIT_SHA)
+  - BRANCH_NAME=${CI_COMMIT_REF_NAME}
+  - REPO_NAME=${CI_PROJECT_NAME}
+  - JOB_URL=${CI_JOB_URL}  # 获取当前作业的 URL
+  - JOB_STATUS=${CI_JOB_STATUS}  # 获取当前构建状态
+
+  # 设置通知消息，展示构建状态
+  - >
+    if [ "$CI_JOB_STATUS" == "success" ]; then
+      MESSAGE_TEXT="中台BASE系统 构建成功"
+      COLOR="green"
+    elif [ "$CI_JOB_STATUS" == "failed" ]; then
+      MESSAGE_TEXT="中台BASE系统 构建失败"
+      COLOR="red"
+    fi
+
+  # 构建飞书卡片数据
+  - >
+    MESSAGE_JSON='{
+      "msg_type": "interactive",
+      "card": {
+        "config": {
+          "wide_screen_mode": true,
+          "enable_forward": true
+        },
+        "header": {
+          "title": {
+            "tag": "plain_text",
+            "content": "'"$MESSAGE_TEXT"'"
+          },
+          "template": "'"$COLOR"'"
+        },
+        "elements": [
+          {
+            "tag": "div",
+            "text": {
+              "tag": "lark_md",
+              "content": "提交人: '"$COMMITTER_NAME"'\n仓库名称: '"$REPO_NAME"'\n分支: '"$BRANCH_NAME"'\n构建日志: [日志地址]('"$JOB_URL"')\n文档地址: [文档链接]('"https://imeik.feishu.cn/wiki/CEkQwlnMgifHiMkXkGpcmkc2nAg"')\n访问地址: [开发环境]('"https://base-dev.imeik.com"') [测试环境]('"https://base-test.imeik.com"') [预览环境]('"https://base-pre.imeik.com"') [线上环境]('"https://base.imeik.com"')"
+            }
+          }
+        ]
+      }
+    }'
+
+  # 发送飞书消息
+  - >
+    curl -X POST -H "Content-Type: application/json" -d "$MESSAGE_JSON" https://open.feishu.cn/open-apis/bot/v2/hook/1934d544-afce-4ac8-ae59-fa6397957cc2

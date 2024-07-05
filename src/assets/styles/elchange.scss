@@ -1,0 +1,112 @@
+// 覆盖elementui自带组件样式
+
+.el-form-item__label {
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.el-tooltip__popper {
+  max-width: 700px !important;
+}
+
+.el-descriptions-item__label {
+  color: rgba(0, 0, 0, 1);
+  font-weight: 500;
+}
+
+.el-descriptions-item__content {
+  padding-right: 24px;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 400;
+}
+
+.deleteConfirm {
+  .el-icon-warning {
+    color: #f56c6c !important;
+    font-size: 20px !important;
+  }
+
+  .el-message-box__message {
+    padding-left: 28px !important;
+  }
+}
+
+.el-textarea .el-input__count {
+  // color: black !important;
+  // text-shadow: 1px 0 black !important;
+  background: transparent !important;
+  transform: translate(0, 8px);
+}
+
+.el-avatar > img {
+  vertical-align: baseline !important;
+}
+
+.el-cascader-node.in-active-path,
+.el-cascader-node.is-active,
+.el-cascader-node.is-selectable.in-checked-path {
+  background-color: rgba($mainColorBlue, 0.05);
+}
+
+.el-popconfirm__main {
+  padding-right: 8px;
+  padding-bottom: 12px;
+  padding-left: 8px;
+}
+
+.el-dialog__header {
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+  color: #303133;
+  font-weight: 600;
+  border-bottom: 1px solid #e8e8e8;
+
+  .el-dialog__title {
+    font-size: 17px;
+  }
+
+  .el-dialog__headerbtn {
+    top: 18px;
+  }
+}
+
+.el-scrollbar__wrap {
+  margin-bottom: 0 !important;
+  overflow-x: hidden !important;
+}
+
+.el-cascader-menu {
+  .el-radio {
+    position: absolute;
+    left: 8px;
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+  }
+}
+
+.el-button-group > .el-button:not(:last-child) {
+  margin-right: 0 !important;
+}
+
+.el-textarea__inner {
+  font-family: none;
+}
+
+// 去掉button focus态样式
+.el-button--primary:focus {
+  color: #fff !important;
+  background-color: #005dbe !important;
+  border-color: #005dbe !important;
+}
+
+// 带字数统计的Input，扩大右侧间距
+.el-input[showwordlimit='true'] {
+  .el-input__inner {
+    padding-right: 50px;
+  }
+}
+
+// 去掉上传动画
+.el-list-enter-active, .el-list-leave-active, .el-list-leave-to {
+  transition: none !important;
+}

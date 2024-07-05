@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="21px" viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>评分小</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="99.4673295%" id="linearGradient-1">
+            <stop stop-color="#C47BF9" offset="0%"></stop>
+            <stop stop-color="#AB63F6" offset="100%"></stop>
+        </linearGradient>
+        <path d="M19,10.5 C19,15.194125 15.194125,19 10.5,19 C5.805875,19 2,15.194125 2,10.5 C2,5.805875 5.805875,2 10.5,2 L18.15,2 C18.619442,2 19,2.38055796 19,2.85 L19,10.5 L19,10.5 Z" id="path-2"></path>
+        <filter x="-5.9%" y="-5.9%" width="123.5%" height="123.5%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="1" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.662395448   0 0 0 0 0.278431373   0 0 0 0 1  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="97.5579108%" id="linearGradient-4">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#F1DCFF" offset="100%"></stop>
+        </linearGradient>
+        <path d="M14.7254259,9.45668342 C14.6669242,9.25918625 14.5005297,9.11261045 14.2972306,9.07948904 L12.0032513,8.7309827 L10.9773888,6.55919313 C10.8921,6.37254432 10.706582,6.25204043 10.5013802,6.25 C10.2963318,6.25211494 10.1110069,6.3726279 10.0259027,6.55919313 L9.00004031,8.7309827 L6.7049985,9.07948904 C6.50190197,9.11279728 6.33575287,9.25933872 6.27733446,9.45668342 C6.21464582,9.65749957 6.26670926,9.87744108 6.41174316,10.0251313 L8.07139839,11.7150683 L7.67986001,14.1025493 C7.64532813,14.3102718 7.72767338,14.5201194 7.8907701,14.6444342 C8.05229766,14.7677995 8.27133028,14.7844559 8.44965528,14.6869349 L10.5013802,13.5590706 L12.5536363,14.6858724 C12.732021,14.7831159 12.9508929,14.7664716 13.1125215,14.6433717 C13.2756182,14.5195881 13.3574322,14.3097406 13.3234316,14.1014868 L12.9313619,11.714537 L14.5920797,10.0246 C14.7365823,9.87744108 14.7886458,9.65749957 14.7259571,9.45668342" id="path-5"></path>
+        <filter x="-70.6%" y="-58.8%" width="264.7%" height="264.7%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="1" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.694117647   0 0 0 0 0.415686275   0 0 0 0 0.968627451  0 0 0 0.6 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="20220402确定版本" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="42试卷详情" transform="translate(-1049.000000, -1875.000000)" fill-rule="nonzero">
+            <g id="编组-9" transform="translate(240.000000, 303.000000)">
+                <g id="main" transform="translate(188.000000, 88.000000)">
+                    <g id="编组-8备份-5" transform="translate(0.000000, 1469.000000)">
+                        <g id="编组-7" transform="translate(605.000000, 8.000000)">
+                            <g id="评分小" transform="translate(16.000000, 7.000000)">
+                                <rect id="矩形" fill="#000000" opacity="0" x="0" y="0" width="20" height="20"></rect>
+                                <g id="形状">
+                                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                                    <use fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                                </g>
+                                <g id="路径">
+                                    <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                                    <use fill="url(#linearGradient-4)" xlink:href="#path-5"></use>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

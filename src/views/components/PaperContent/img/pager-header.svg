@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="120px" viewBox="0 0 800 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>bg</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="800" height="1130"></rect>
+        <filter x="-0.9%" y="-0.6%" width="101.9%" height="101.3%" filterUnits="objectBoundingBox" id="filter-3">
+            <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.09 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="3.061617e-15%" id="linearGradient-4">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#EAF8FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="20220402确定版本" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="43新建试卷_试卷背景切图" transform="translate(-320.000000, -191.000000)">
+            <rect id="矩形" fill="#F5F5F5" x="60" y="48" width="1380" height="1961"></rect>
+            <g id="main" transform="translate(320.000000, 191.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="蒙版">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                    <rect stroke="#E9E9E9" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" x="-0.5" y="-0.5" width="801" height="1131"></rect>
+                </g>
+                <g id="bg" mask="url(#mask-2)">
+                    <g transform="translate(-4.000000, -24.000000)">
+                        <rect id="矩形" fill="url(#linearGradient-4)" x="1.03964194" y="18.7078652" width="806.762148" height="125"></rect>
+                        <path d="M0,0 L215.205882,0 C198.627661,37.2896566 161.645769,61.3202247 120.836996,61.3202247 L0,61.3202247 L0,61.3202247 L0,0 Z" id="矩形" fill="#BCDFFF" opacity="0.2"></path>
+                        <path d="M108.122762,24.9438202 L813,24.9438202 C800.378697,49.8104806 774.857168,65.4775281 746.970825,65.4775281 L108.122762,65.4775281 L108.122762,65.4775281 L108.122762,24.9438202 Z" id="矩形备份-10" fill="#C5EAFF" opacity="0.2" transform="translate(460.561381, 45.210674) scale(-1, 1) translate(-460.561381, -45.210674) "></path>
+                        <path d="M0,14.5505618 L169.461637,14.5505618 C157.557173,30.8779395 138.567272,40.5337079 118.36085,40.5337079 L0,40.5337079 L0,40.5337079 L0,14.5505618 Z" id="矩形备份-13" fill="#BCDFFF"></path>
+                        <path d="M128.915601,14.5505618 L813,14.5505618 C800.942302,30.8904786 781.841728,40.5337079 761.534562,40.5337079 L128.915601,40.5337079 L128.915601,40.5337079 L128.915601,14.5505618 Z" id="矩形备份-11" fill="#C5EAFF" transform="translate(470.957801, 27.542135) scale(-1, 1) translate(-470.957801, -27.542135) "></path>
+                    </g>
+                </g>
+            </g>
+            <g id="编组-3"></g>
+        </g>
+    </g>
+</svg>
